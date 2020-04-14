@@ -12,6 +12,7 @@ function Header() {
             Home
           </NavLink>
         </Button>
+        {" | "}
         <Button>
           <NavLink to="/about">About</NavLink>
         </Button>
