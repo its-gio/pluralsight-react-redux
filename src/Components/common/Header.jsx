@@ -14,6 +14,10 @@ function Header() {
         </Button>
         {" | "}
         <Button>
+          <NavLink to="/courses">Courses</NavLink>
+        </Button>
+        {" | "}
+        <Button>
           <NavLink to="/about">About</NavLink>
         </Button>
       </div>
