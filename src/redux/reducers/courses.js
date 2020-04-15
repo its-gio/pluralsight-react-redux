@@ -11,14 +11,15 @@ export function createCourse(course) {
 }
 
 // Reducer
-export default function courseReducer(state = initialState, action) {
+export default function reducer(state = initialState, action) {
   switch (action.type) {
     case CREATE_COURSE:
       return {
         ...state,
         courses: [...state.courses, action.payload],
       };
+
     default:
-      state;
+      return state;
   }
 }
