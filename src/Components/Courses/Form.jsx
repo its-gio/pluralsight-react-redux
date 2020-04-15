@@ -17,6 +17,7 @@ class Form extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.createCourse(this.state.course);
+    this.setState({ course: { title: "" } });
   };
 
   render() {
