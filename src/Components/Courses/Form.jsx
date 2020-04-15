@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { Button, Input } from "@material-ui/core";
+import { connect } from "react-redux";
+import { createCourse } from "../../redux/reducers/courses";
 
-export default class Courses extends Component {
+class Form extends Component {
   state = {
     course: {
       title: "",
@@ -14,8 +16,7 @@ export default class Courses extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-
-    console.log("Testing!");
+    this.props.createCourse(this.state.course);
   };
 
   render() {
@@ -37,3 +38,5 @@ export default class Courses extends Component {
     );
   }
 }
+
+export default connect(null, { createCourse })(Form);
